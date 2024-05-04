@@ -40,6 +40,7 @@
     </style>
 </head>
 <body>
+    {% include 'nav.html' %}
     <div class ="container">
         <h1 class="text-center mt-2 mb-4">Tô Minh Tiến's Company</h1>
         <div class="imgmain">
@@ -57,16 +58,23 @@
             </div>
         </div>
         <h2 class="text-center mt-2 mb-4">Instroduction</h2>
-        <p class="lead">
-            Chào mừng đến với trang web tuyển dụng của chúng tôi!Trang web này là nơi mà bạn có thể khám phá và tìm kiếm những cơ hội việc 
-            làm mới nhất từ các doanh nghiệp hàng đầu. Với sự đa dạng trong các vị trí công việc và các lĩnh vực khác nhau, chúng tôi cam 
-            kết cung cấp cho bạn một môi trường tuyển dụng đáng tin cậy và thuận tiện. Tại đây, bạn sẽ không chỉ tìm thấy các thông tin về 
-            các vị trí tuyển dụng, mà còn có cơ hội tương tác trực tiếp với nhà tuyển dụng thông qua các phương tiện truyền thông xã hội và 
-            hình ảnh minh họa sống động.Với sự độc đáo và sáng tạo trong cách tiếp cận, chúng tôi hy vọng rằng trang web này sẽ là điểm đến 
-            lý tưởng cho bạn trong việc tìm kiếm công việc mơ ước. Hãy tham gia cùng chúng tôi ngay hôm nay để bắt đầu hành trình tìm kiếm 
-            sự nghiệp của bạn!
-        </p>
-        <h2 class="text-center mt-2 mb-4">Open Position!</h2>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">
+                    Chào mừng đến với trang web tuyển dụng của chúng tôi!Trang web này là nơi mà bạn có thể khám phá và tìm kiếm những cơ hội việc 
+                    làm mới nhất từ các doanh nghiệp hàng đầu. Với sự đa dạng trong các vị trí công việc và các lĩnh vực khác nhau, chúng tôi cam 
+                    kết cung cấp cho bạn một môi trường tuyển dụng đáng tin cậy và thuận tiện. Tại đây, bạn sẽ không chỉ tìm thấy các thông tin về 
+                    các vị trí tuyển dụng, mà còn có cơ hội tương tác trực tiếp với nhà tuyển dụng thông qua các phương tiện truyền thông xã hội và 
+                    hình ảnh minh họa sống động.Với sự độc đáo và sáng tạo trong cách tiếp cận, chúng tôi hy vọng rằng trang web này sẽ là điểm đến 
+                    lý tưởng cho bạn trong việc tìm kiếm công việc mơ ước. Hãy tham gia cùng chúng tôi ngay hôm nay để bắt đầu hành trình tìm kiếm 
+                    sự nghiệp của bạn!
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/Sasuke.jpg" alt="" style="height: 320px;border-radius:4px;">
+            </div>
+        </div>
+        <h2 class="text-center mt-2 mb-4">Open Position</h2>
         <p>
             {% for job in jobs %}
             {% include 'jobiteam.html' %}
@@ -75,9 +83,10 @@
             
         </p>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg">Contact us</button>
+            <a href="mailto:totien211202995@gmail.com?subject=Question about job" class="btn btn-primary btn-lg">Contact us</a>
             <p class="mt-4">Copyright 2022, TMT</p>
         </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
